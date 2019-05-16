@@ -3,6 +3,10 @@
 
 The code for this assignment chooses three toy problems, but there are other options available in _ABAGAIL_. 
 
+## General
+
+If you are running this code in OS X you should consider downloading Jython directly. The version provided by homebrew does mot seem to work as expected for this code.
+
 ## Data
 
 The data loading code expects datasets to be stored in "./data".
@@ -22,6 +26,17 @@ Output CSVs and images are written to `./output` and `./output/images` respectiv
 each toy problem (`CONTPEAKS`, `FLIPFLOP`, `TSP`) and the neural network from the _Supervised Learning Project_ (`NN_OUTPUT`, `NN`).
 
 If these folders do not exist the experiments module will attempt to create them.
+
+## Necessary edits for the Neural Network Problem
+
+In order to get the `NN-*` scripts to run you must edit each and make sure these values make sense for your data set:
+```
+INPUT_LAYER = 8
+HIDDEN_LAYER1 = 16
+HIDDEN_LAYER2 = 16
+OUTPUT_LAYER = 1
+```
+In this case, there are 8 features and it is a binary classification problem and as a result `INPUT_LAYER` is `8` and `OUTPUT_LAYER` is `1`. If you had, say, 20 features you would set `INPUT_LAYER` to 20.
 
 ## Running Experiments
 
